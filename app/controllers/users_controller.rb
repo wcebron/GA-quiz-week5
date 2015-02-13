@@ -11,9 +11,9 @@ class UsersController < ApplicationController
   end
 
   def create
-    @post = Post.new(user_params)
-    if @post.save
-      redirect_to posts_path
+    @user = User.new(user_params)
+    if @user.save
+      redirect_to users_path
     else
       render 'new'
     end
